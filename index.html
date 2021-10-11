@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Parallax Scrolling Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/logo.PNG" alt=""></a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/images/stars.png" id="stars">
+        <img src="/images/moon.png" id="moon">
+        <img src="/images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="/images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius urna velit, id pharetra elit malesuada in. Pellentesque feugiat lacus id diam ullamcorper condimentum. In vel accumsan lectus. Sed quis lacus id risus consectetur consequat.In sit amet leo hendrerit elit euismod luctus nec ac turpis. Morbi sit amet sapien non elit pellentesque malesuada ac sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam orci mi, sollicitudin nec augue in, lacinia ultrices ante. In vitae orci laoreet, congue nibh in, condimentum dui. Duis tellus justo, mattis vitae neque at, porttitor facilisis magna. Aliquam imperdiet tempor diam eget commodo.
+        
+        <br><br>
+        In sit amet leo hendrerit elit euismod luctus nec ac turpis. Morbi sit amet sapien non elit pellentesque malesuada ac sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam orci mi, sollicitudin nec augue in, lacinia ultrices ante. In vitae orci laoreet, congue nibh in, condimentum dui. Duis tellus justo, mattis vitae neque at, porttitor facilisis magna. Aliquam imperdiet tempor diam eget commodo.
+        <br><br>
+        In sit amet leo hendrerit elit euismod luctus nec ac turpis. Morbi sit amet sapien non elit pellentesque malesuada ac sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam orci mi, sollicitudin nec augue in, lacinia ultrices ante. In vitae orci laoreet, congue nibh in, condimentum dui. Duis tellus justo, mattis vitae neque at, porttitor facilisis magna. Aliquam imperdiet tempor diam eget commodo.
+        <br><br>
+        In sit amet leo hendrerit elit euismod luctus nec ac turpis. Morbi sit amet sapien non elit pellentesque malesuada ac sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam orci mi, sollicitudin nec augue in, lacinia ultrices ante. In vitae orci laoreet, congue nibh in, condimentum dui. Duis tellus justo, mattis vitae neque at, porttitor facilisis magna. Aliquam imperdiet tempor diam eget commodo.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius urna velit, id pharetra elit malesuada in. Pellentesque feugiat lacus id diam ullamcorper condimentum. In vel accumsan lectus. Sed quis lacus id risus consectetur consequat.In sit amet leo hendrerit elit euismod luctus nec ac turpis. Morbi sit amet sapien non elit pellentesque malesuada ac sed dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam orci mi, sollicitudin nec augue in, lacinia ultrices ante. In vitae orci laoreet, congue nibh in, condimentum dui. Duis tellus justo, mattis vitae neque at, porttitor facilisis magna. Aliquam imperdiet tempor diam eget commodo.
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'  //control the scrolling left of the star by moving the picture to the left
+            moon.style.top = value * 1.05 + 'px'
+            mountains_behind.style.top = value * 0.5 + 'px'
+            mountains_front.style.top = value * 0 + 'px'
+            text.style.marginRight = value * 4 + 'px'
+            text.style.marginTop = value * 1.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            header.style.top = value * 0.5 + 'px'
+        })
+    </script>
+</body>
+</html>
